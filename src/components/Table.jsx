@@ -50,13 +50,16 @@ const Table = ({ tableData, filter }) => {
                   key={dataField}
                   onClick={() => sort && handleSort(dataField)}>
                   {text}
-                  <img
-                    className='sort'
-                    src={
-                      "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMGw4IDEwaC0xNmw4LTEwem04IDE0aC0xNmw4IDEwIDgtMTB6Ii8+PC9zdmc+"
-                    }
-                    alt='sort icon'
-                  />
+
+                  {sort && (
+                    <img
+                      className='sort'
+                      src={
+                        "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMGw4IDEwaC0xNmw4LTEwem04IDE0aC0xNmw4IDEwIDgtMTB6Ii8+PC9zdmc+"
+                      }
+                      alt='sort icon'
+                    />
+                  )}
                 </th>
               );
             })}
